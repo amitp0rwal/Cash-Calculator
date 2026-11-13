@@ -46,17 +46,15 @@ flutter_native_splash:
   android: true
   ios: true
   color: "#7CE4F3"
-  image: "assets/images/logo.png"
+  image: "assets/images/icon.png"
   android_12:
     color: "#7CE4F3"
-    image: assets/images/logo.png
+    image: assets/images/icon.png
 
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/logo.png"
-  adaptive_icon_background: "#ffffff"
-  adaptive_icon_foreground: "assets/images/logo.png"
+  image_path: "assets/images/icon.png"
 
 
   # The "flutter_lints" package below contains a set of recommended lints to
