@@ -105,8 +105,8 @@ class MyHomePageState extends State<MyHomePage> {
       resultone = noValue;
     }
 
-    dynamic total = '';
-    dynamic totalrupees = 0;
+    dynamic total;
+    dynamic totalrupees;
     if(resultfh != noValue &&
         resultth != noValue &&
         resultoh != noValue &&
@@ -125,7 +125,7 @@ class MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('Cash Calculator', style: TextStyle(fontSize: 25, fontWeight: FontWeight(450)),)),
+        title: Center(child: Text('Cash Calculator', style: TextStyle(fontSize: 30, fontWeight: FontWeight(400)),)),
         backgroundColor: Colors.blue,
       ),
       body: SafeArea(
@@ -478,7 +478,36 @@ class MyHomePageState extends State<MyHomePage> {
                           width: double.infinity,
                           height: 80,
                           color: Colors.green,
-                          child: Center(child: Text('Total Amount = $total', style: TextStyle(fontSize: 25),))
+                          child: Row(
+                            children: [
+                              InkWell(
+                                child: Container(
+                                  width: 50,
+                                  height: 80,
+                                  color: Colors.red,
+                                  child: Center(child: Text('A/C', style: TextStyle(fontSize: 28, fontWeight: FontWeight(450)),))
+                                ),
+                                onTap: (){
+                                  FHcontroller.clear();
+                                  THcontroller.clear();
+                                  OHcontroller.clear();
+                                  FYcontroller.clear();
+                                  TYcontroller.clear();
+                                  TNcontroller.clear();
+                                  FEcontroller.clear();
+                                  TWOcontroller.clear();
+                                  ONEcontroller.clear();
+                                  setState(() {});
+                                },
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Container(
+                                child: Center(child: Text('Total Amount = $total', style: TextStyle(fontSize: 25))),
+                              )
+                            ],
+                          )
                       )
                     ],
                   ),
